@@ -92,7 +92,7 @@ async function getCard(mealDetails) {
 function openCard(meal) {
     closenav()
     $('.innerLoading').css('display', 'none')
-    let tags = meal[0].strTags.split(",")
+    let tags = meal[0].strTags?.split(",")
     let Tag = ``
     if (tags != undefined) {
         for (let i = 0; i < tags.length; i++) {
