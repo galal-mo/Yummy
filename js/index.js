@@ -163,6 +163,7 @@ async function searchingLetter(st) {
 function search() {
     closenav()
     $('#forSearch').css('display', 'flex')
+    document.getElementById('Home').classList.remove('contact-class')
     cartona = `
     <div class="col-md-6">
     <input onkeyup="searchingName(this.value)" class="form-control form-control1" type="text" id="byName" placeholder="search by name">
@@ -181,6 +182,8 @@ function search() {
 function category() {
     closenav()
     getCategories()
+    document.getElementById('Home').classList.remover('contact-class')
+    $('.innerLoading').css('display', 'none')
 }
 async function getCategories() {
     loadingOpen()
@@ -224,6 +227,8 @@ async function showCategory(category) {
 function Area() {
     closenav()
     getAreas()
+    document.getElementById('Home').classList.remove('contact-class')
+    $('.innerLoading').css('display', 'none')
 }
 async function getAreas() {
     loadingOpen()
@@ -266,6 +271,8 @@ async function showArea(area) {
 function ingredients() {
     closenav()
     getIngredients()
+    document.getElementById('Home').classList.remove('contact-class')
+    $('.innerLoading').css('display', 'none')
 }
 async function getIngredients() {
     loadingOpen()
