@@ -17,6 +17,7 @@ function loadingClose() {
 getMeals()
 let widths = $('#hidden').outerWidth()
 $('#nav').css('left', -widths)
+document.getElementById('Home').classList.remove('contact-class')
 let left = true
 $('#open').click(function () {
     $('#nav').css('display', 'flex')
@@ -214,6 +215,7 @@ function showcategories(data) {
 }
 async function showCategory(category) {
     loadingOpen()
+    closenav()
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     if (response.ok && 400 != response.status) {
         let result = await response.json()
@@ -256,6 +258,7 @@ function showAreas(data) {
 }
 async function showArea(area) {
     loadingOpen()
+    closenav()
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`)
     if (response.ok && 400 != response.status) {
         let result = await response.json()
@@ -302,6 +305,7 @@ function showIngredients(data) {
 }
 async function showIngredientsMeals(INgrediant) {
     loadingOpen()
+    closenav()
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${INgrediant}`)
     if (response.ok && 400 != response.status) {
         let result = await response.json()
