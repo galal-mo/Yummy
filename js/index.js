@@ -67,7 +67,7 @@ function showMeals(data) {
     for (let i = 0; i < data.length; i++) {
         cartona += `
         <div class="col-md-3" onClick="getCard('${data[i].strMeal}')">
-        <div class="overflow-hidden meals position-relative rounded-2 cursor-pointer">
+        <div class="overflow-hidden meals position-relative rounded-2 poi">
             <img src="${data[i].strMealThumb}" class="w-100 rounded" alt="">
             <div class="meal-over position-absolute rounded d-flex align-items-center text-black p-2">
                 <h3>${data[i].strMeal}</h3>
@@ -200,7 +200,7 @@ function showcategories(data) {
     for (let i = 0; i < data.length; i++) {
         cartona += `
     <div class="col-md-3" onClick="showCategory('${data[i].strCategory}')">
-        <div class="overflow-hidden meals position-relative rounded-2 cursor-pointer">
+        <div class="overflow-hidden meals position-relative rounded-2 poi">
             <img src="${data[i].strCategoryThumb}" class="w-100 rounded" alt="">
             <div class="meal-over position-absolute rounded text-center text-black p-2 overflow-hidden">
                 <h3>${data[i].strCategory}</h3>
