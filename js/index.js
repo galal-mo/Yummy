@@ -182,7 +182,7 @@ function search() {
 function category() {
     closenav()
     getCategories()
-    document.getElementById('Home').classList.remover('contact-class')
+    document.getElementById('Home').classList.remove('contact-class')
     $('.innerLoading').css('display', 'none')
 }
 async function getCategories() {
